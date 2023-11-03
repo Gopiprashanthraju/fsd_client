@@ -1,0 +1,90 @@
+.app {
+  width: 100px;
+  height: 100vh;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-top: -70px;
+  margin-bottom: -10px;
+}
+menu {
+  width: 100px;
+  height: 100%;
+  background: #19162c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+}
+menu img {
+  width: 3em;
+  padding-top: 30px;
+  margin-right: 30px;
+}
+
+menu ul {
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+menu ul li {
+  list-style: none;
+  margin: 20px 30px;
+  position: relative;
+  color: #8c8a95;
+  width: 100%;
+  text-align: center;
+  padding-right: 100px;
+}
+
+menu ul li a {
+  font-size: 24px;
+  color: #8c8a95;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+menu ul li a::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: -10px;
+  width: 0px;
+  height: 20px;
+
+  background: #b1147d;
+  border-radius: 50%;
+}
+
+menu ul li:hover a::before {
+  width: 0px;
+  transition: all 0.3s;
+}
+
+menu ul li.active a::before {
+  width: 0px;
+  transition: all 0.3s;
+}
+
+menu ul li.active a {
+  color: #b1147d;
+  width: 0px;
+}
+
+menu ul li:hover a {
+  color: #b1147d;
+}
+
+.lastMenu {
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 525px) {
+  menu {
+    min-width: 68px;
+  }
+}
